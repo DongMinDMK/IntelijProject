@@ -12,4 +12,5 @@ public interface ICartDAO {
     List<CartVO> cartSelectList(String userid);
 
     void deleteCart(int cseq);
+
 }

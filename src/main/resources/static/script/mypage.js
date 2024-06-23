@@ -64,7 +64,7 @@ function go_order_insert(){
 	}else{
 		var ans = confirm("선택한 항목을 주문할까요?");
 		if( ans ){
-			document.cartFrm.action = "shop.do?command=orderInsert";
+			document.cartFrm.action = "orderInsert";
 			document.cartFrm.submit();
 		}
 	}
@@ -75,7 +75,7 @@ function go_order_insert(){
 function go_order(){
 	var ans = confirm("현재 상품을 주문할까요?");
 	if( ans ){
-		document.formm.action = "shop.do?command=orderInsertOne";
+		document.formm.action = "orderInsertOne";
 		document.formm.submit();
 	}
 }

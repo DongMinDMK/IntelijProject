@@ -21,7 +21,7 @@
                         <h3 style="font-size:170%;">${productVO.content}</h3></div>
                     <div class="btn">
                         <input type="button" value="장바구니에 담기"   onclick="go_cart()">
-                        <input type="button" value="즉시 구매"  onclick="go_order(  )">
+                        <input type="button" value="즉시 구매"  onclick="go_order()">
                         <input type="button"  value="메인으로"
                                onclick="location.href='/'">
                     </div>
