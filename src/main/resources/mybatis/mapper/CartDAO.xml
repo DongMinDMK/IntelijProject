@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.example.springboot_g14.dao.ICartDAO">
+    <insert id="insertCart" parameterType="org.example.springboot_g14.dto.CartVO">
+        insert into cart(userid, pseq, quantity) values(#{userid}, #{pseq}, #{quantity})
+    </insert>
+
+    <select id="cartSelectList" resultType="org.example.springboot_g14.dto.CartVO">
+        select* from cart_view where userid=#{param1}
+    </select>
+
+    <delete id="deleteCart">
+        delete from cart where cseq=#{param1}
+    </delete>
+</mapper>

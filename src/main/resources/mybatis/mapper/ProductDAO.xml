@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.example.springboot_g14.dao.IProductDAO">
+    <select id="getBestList" resultType="org.example.springboot_g14.dto.ProductVO">
+        select* from best_pro_view
+    </select>
+
+    <select id="getNewList" resultType="org.example.springboot_g14.dto.ProductVO">
+        select* from new_pro_view
+    </select>
+
+    <select id="getKindList" resultType="org.example.springboot_g14.dto.ProductVO">
+        select* from product where kind=#{param1}
+    </select>
+
+    <select id="getOneProduct" resultType="org.example.springboot_g14.dto.ProductVO">
+        select* from product where pseq=#{param1}
+    </select>
+</mapper>
