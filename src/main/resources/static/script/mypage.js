@@ -80,6 +80,30 @@ function go_order(){
 	}
 }
 
+function qnaViewWithPass(pass, qseq){
+	var inputPass = window.prompt("비밀글입니다. 암호를 입력하세요..");
+
+	if(pass == inputPass){
+		location.href="qnaView?qseq=" + qseq;
+	}else{
+		window.alert("암호가 일치하지 않습니다.");
+	}
+}
+
+function qnaView(qseq){
+	location.href="qnaView?qseq=" + qseq;
+}
+
+function enable(){
+	if(document.fornm.secret.checked==true){
+		document.fornm.pass.disabled=false;
+	}else{
+		document.fornm.pass.disabled = true;
+		document.fornm.pass.value="";
+	}
+}
+
+
 
 
 

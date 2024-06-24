@@ -39,6 +39,8 @@
                                 <div class="col">
                                     <c:if test="${orderVO.result=='1'}">주문(결제)완료</c:if>
                                     <c:if test="${orderVO.result=='2'}">처리완료</c:if>
+                                    <c:if test="${orderVO.result=='3'}">배송완료</c:if>
+                                    <c:if test="${orderVO.result=='4'}">구매확정</c:if>
                                 </div>
                             </div>
                         </c:forEach>

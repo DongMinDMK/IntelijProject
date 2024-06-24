@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.example.springboot_g14.dao.IAdminDAO">
+    <select id="getAdmin" resultType="org.example.springboot_g14.dto.AdminVO">
+        select* from admins where adminid=#{param1}
+    </select>
+
+    <select id="getAllCount" resultType="_int">
+        select count(*) from ${param1} where ${param2} like concat('%', #{param3}, '%')
+    </select>
+
+    <select id="getProductList" resultType="org.example.springboot_g14.dto.ProductVO">
+        select * from product where name like concat('%', #{param2}, '%') order by pseq desc limit #{param1.displayRow} offset #{param1.startNum}
+    </select>
+</mapper>
